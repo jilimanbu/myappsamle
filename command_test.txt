@@ -1,3 +1,63 @@
 $ git init
 $ git add <file>
 $ git status
+$ git commit
+$ git push
+$ git pull
+$ git clone
+
+
+初始化
+git init
+添加用户配置 用户名与邮箱
+git config --gloabal user.name ["user_name"]
+git config --gloabal user.email ["user_email]
+
+添加文件
+git add [filename]
+全部添加
+git add .
+
+查看状态
+git status
+
+提交
+git commit
+编辑器编辑提交信息 
+vim设置 git config --global core.editor vim
+直接编辑提示信息
+git commit -m ["info"]
+
+忽略 .gitignore 
+
+创建分支
+git branch [branch_name]
+变换分支
+git checkout [branch_name]
+合并分支
+git merge [branch_name]
+查看分支
+git branch -a 红色部分为远程分支
+
+
+添加远程代码仓库
+git remote add origin [https://github.com/jilimanbu/myappsamle.git]
+推送到远程代码仓库
+git push -u origin [master_branch_name]
+查看远程代码仓库
+git remote -v
+
+克隆远程代码仓库
+git clone [url]
+拉取远程代码仓库
+git pull
+
+### 报错信息：
+fatal: unable to access 'https://github.com/jilimanbu/myappsamle.git/': Failed to connect to github.com port 443: Timed out
+取消代理：   —— 手动关闭vpn
+            —— 代码：git config --global --unset http.proxy
+                    git config --global --unset https.proxy
+fatal: unable to access 'https://github.com/jilimanbu/myappsamle.git/': OpenSSL SSL_read: Connection was reset, errno 10054
+取消SSL验证: git config --global http.sslVerify "false"
+修改config文件中url 的https为http
+
