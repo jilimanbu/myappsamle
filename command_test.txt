@@ -54,10 +54,12 @@ git pull
 
 ### 报错信息：
 fatal: unable to access 'https://github.com/jilimanbu/myappsamle.git/': Failed to connect to github.com port 443: Timed out
+fatal: unable to access 'https://github.com/jilimanbu/shapelet_for_SCD_predict.git/': gnutls_handshake() failed: The TLS connection was non-properly terminated.
 取消代理：   —— 手动关闭vpn
             —— 代码：git config --global --unset http.proxy
                     git config --global --unset https.proxy
 fatal: unable to access 'https://github.com/jilimanbu/myappsamle.git/': OpenSSL SSL_read: Connection was reset, errno 10054
 取消SSL验证: git config --global http.sslVerify "false"
 修改config文件中url 的https为http
+
 
